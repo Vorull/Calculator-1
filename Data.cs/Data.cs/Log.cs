@@ -17,10 +17,6 @@ namespace Data.cs
         /// </summary>
         double b=1;
         /// <summary>
-        /// значение log
-        /// </summary>
-        double value=1;
-        /// <summary>
         /// если true, то заполнен верно 
         /// </summary>
         public double A
@@ -57,7 +53,7 @@ namespace Data.cs
         /// Конструктор с параметрами
         /// </summary>
         /// <param name="A">основание</param>
-        /// <param name="B">под. лог. выражение</param>
+        /// <param name="B">под. лог.выражение</param>
         public Log(double A, double B)
         {
             this.A = A;
@@ -276,6 +272,6 @@ namespace Data.cs
 
 
 
-}
+
 
 
