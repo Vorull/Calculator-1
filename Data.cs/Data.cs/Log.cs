@@ -26,7 +26,7 @@ namespace Data.cs
         public double A
         {
             get { return a; }
-            set { if (value > 0) a = value; else a = 1; }
+            set { if ((value > 0)&&(value!=1)) a = value; else a = 2; }
         }
         /// <summary>
         /// Получение/заполение под. лог. выраж.
@@ -34,14 +34,14 @@ namespace Data.cs
         public double B
         {
             get { return b; }
-            set { if (value > 0) b = value; else  b = 1;  }
+            set { if (value > 0) b = value; else  b = 2;  }
         }
         /// <summary>
         /// Получить значение log
         /// (присваивать значения нельзя/только получить)</summary>
         public double Value
         {
-            get { double buf;buf = Math.Log(a)/Math.Log(b); return buf; }
+            get { double buf;buf = Math.Log(b)/ Math.Log(a); return buf; }
         }
        
         /// <summary>
@@ -63,8 +63,10 @@ namespace Data.cs
             this.B = B;
         }
        
+        /////////////////////////////////////////////////////
 
     }
+    
     
 
 
