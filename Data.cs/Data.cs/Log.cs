@@ -41,6 +41,7 @@ namespace Data.cs
         /// (присваивать значения нельзя/только получить)</summary>
         public double Value
         {
+            //set не сделан по причине того, что пришлось бы вычислять новые a b 
             get { double buf;buf = Math.Log(b)/ Math.Log(a); return buf; }
         }
        
@@ -62,8 +63,70 @@ namespace Data.cs
             this.A = A;
             this.B = B;
         }
-       
-        /////////////////////////////////////////////////////
+        ///////////////////////////ОПЕРАЦИИ_ТИПА_ЛОГОРИФМ-ЛОГОРИФМ/////////////////////////////////////////////
+        /// <summary>
+        /// сложение логорифмов (рузультат в double)
+        /// </summary>
+        /// <param name="slag1">перрвое слагаемое</param>
+        /// <param name="slag2">второе слагаемое</param>
+        /// <returns></returns>
+        public static double operator +(Log slag1, Log slag2)
+        {
+            //переменная под возвращаймое значение
+            double buf = 0;
+            buf = slag1.Value + slag2.Value;
+            return buf;
+        }
+        /// <summary>
+        /// Вычетание логорифмов (рузультат в double)
+        /// </summary>
+        /// <param name="slag1">Первое лагаемое</param>
+        /// <param name="slag2">Второе лагаемое</param>
+        /// <returns></returns>
+        public static double operator -(Log slag1, Log slag2)
+        {
+            //переменная под возвращаймое значение
+            double buf = 0;
+            buf = slag1.Value - slag2.Value;
+            return buf;
+        }
+        /// <summary>
+        /// Деление логорифмов
+        /// </summary>
+        /// <param name="slag1">Делимый логорифм</param>
+        /// <param name="slag2">логорифм делитель</param>
+        /// <returns></returns>
+        public static double operator /(Log slag1, Log slag2)
+        {
+            //переменная под возвращаймое значение
+            double buf = 0;
+            //проверка деления на ноль
+            if (slag2.Value != 0)
+            {
+                buf = slag1.Value / slag2.Value;
+                return buf;
+            }
+            //случай деление на ноль
+            else
+            {
+                buf = 0;
+                return buf;
+            }
+            
+        }
+        /// <summary>
+        /// Произведение логорифмов 
+        /// </summary>
+        /// <param name="slag1">множитель логорифм</param>
+        /// <param name="slag2">множител логорифм</param>
+        /// <returns></returns>
+        public static double operator *(Log slag1, Log slag2)
+        {
+            //переменная под возвращаймое значение 
+            double buf = 0;
+            buf = slag1.Value * slag2.Value;
+            return buf;
+        }
 
     }
     
