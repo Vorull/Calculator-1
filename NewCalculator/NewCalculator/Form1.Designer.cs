@@ -59,6 +59,7 @@
             this.колвоЗнаковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelResult = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBoxStepen = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,6 +236,7 @@
             this.buttonMinus.TabIndex = 23;
             this.buttonMinus.Text = " ̶ ";
             this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
             // 
             // buttonDel
             // 
@@ -245,6 +247,7 @@
             this.buttonDel.TabIndex = 24;
             this.buttonDel.Text = "÷";
             this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonUmn
             // 
@@ -255,6 +258,7 @@
             this.buttonUmn.TabIndex = 25;
             this.buttonUmn.Text = "×";
             this.buttonUmn.UseVisualStyleBackColor = true;
+            this.buttonUmn.Click += new System.EventHandler(this.buttonUmn_Click);
             // 
             // buttonBack
             // 
@@ -308,6 +312,7 @@
             this.buttonCor.TabIndex = 30;
             this.buttonCor.Text = "√";
             this.buttonCor.UseVisualStyleBackColor = true;
+            this.buttonCor.Click += new System.EventHandler(this.buttonCor_Click);
             // 
             // buttonStep
             // 
@@ -318,6 +323,7 @@
             this.buttonStep.TabIndex = 31;
             this.buttonStep.Text = "x^y";
             this.buttonStep.UseVisualStyleBackColor = true;
+            this.buttonStep.Click += new System.EventHandler(this.buttonStep_Click);
             // 
             // label1
             // 
@@ -384,11 +390,20 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "label2";
             // 
+            // textBoxStepen
+            // 
+            this.textBoxStepen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxStepen.Location = new System.Drawing.Point(88, 102);
+            this.textBoxStepen.Name = "textBoxStepen";
+            this.textBoxStepen.Size = new System.Drawing.Size(100, 34);
+            this.textBoxStepen.TabIndex = 38;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 515);
+            this.Controls.Add(this.textBoxStepen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.menuStrip1);
@@ -463,6 +478,7 @@
         private System.Windows.Forms.ToolStripMenuItem колвоЗнаковToolStripMenuItem;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxStepen;
     }
 }
 

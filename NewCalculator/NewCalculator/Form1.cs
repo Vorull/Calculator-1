@@ -21,6 +21,7 @@ namespace NewCalculator
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+            textBoxStepen.Visible = false;
         }
         /// <summary>
         /// ввод цифры 1
@@ -256,10 +257,97 @@ namespace NewCalculator
         {
             //тут надо передать данные из richTextBoxVir в переменную-выражение
             //richTextBoxOsn в переменную-основание
-            labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")"+"+";
-            richTextBoxOsn.Text = "";
-            richTextBoxOsn.Enabled = true;
-            richTextBoxVir.Text = "";
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                labelResult.Text += "+log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "+";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            //тут надо передать данные из richTextBoxVir в переменную-выражение
+            //richTextBoxOsn в переменную-основание
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                labelResult.Text += "-log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "-";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            //тут надо передать данные из richTextBoxVir в переменную-выражение
+            //richTextBoxOsn в переменную-основание
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                if (labelResult.Text.Length==0)
+                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                else
+                    labelResult.Text += "/log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
+        }
+
+        private void buttonUmn_Click(object sender, EventArgs e)
+        {
+            //тут надо передать данные из richTextBoxVir в переменную-выражение
+            //richTextBoxOsn в переменную-основание
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                if (labelResult.Text.Length==0)
+                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                else
+                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
+        }
+        /// <summary>
+        /// ДОДЕЛАТЬ НАДО
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonStep_Click(object sender, EventArgs e)
+        {
+            //тут надо передать данные из richTextBoxVir в переменную-выражение
+            //richTextBoxOsn в переменную-основание
+            //цифру из степени - в степень
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                label1.Visible = false;
+                richTextBoxOsn.Visible = false;
+                richTextBoxVir.Visible = false;
+                textBoxStepen.Visible = true;
+                labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
+        }
+        /// <summary>
+        /// ///корень
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonCor_Click(object sender, EventArgs e)
+        {
+            //тут надо передать данные из richTextBoxVir в переменную-выражение
+            //richTextBoxOsn в переменную-основание
+            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            {
+                labelResult.Text += "sqrt(log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + "))";
+                richTextBoxOsn.Text = "";
+                richTextBoxOsn.Enabled = true;
+                richTextBoxVir.Text = "";
+            }
         }
     }
 }
