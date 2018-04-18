@@ -8,5 +8,22 @@ namespace Data.cs
 {
     class Log
     {
+        double a;
+        double b;
+        double value;
+        bool flag;
+
+        //Свойства 
+
     }
-}
+
+   
+
+
+
+
+
+
+    }
+
+
