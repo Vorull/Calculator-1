@@ -91,7 +91,7 @@ namespace Data.cs
             return buf;
         }
         /// <summary>
-        /// Деление логорифмов
+        /// Деление логорифмов (возвращает значение в double)
         /// </summary>
         /// <param name="slag1">Делимый логорифм</param>
         /// <param name="slag2">логорифм делитель</param>
@@ -115,7 +115,7 @@ namespace Data.cs
             
         }
         /// <summary>
-        /// Произведение логорифмов 
+        /// Произведение логорифмов (возвращает значение в double)
         /// </summary>
         /// <param name="slag1">множитель логорифм</param>
         /// <param name="slag2">множител логорифм</param>
@@ -125,6 +125,18 @@ namespace Data.cs
             //переменная под возвращаймое значение 
             double buf = 0;
             buf = slag1.Value * slag2.Value;
+            return buf;
+        }
+        /// <summary>
+        /// Возведение логорифма в степень (возвращает значение в double)
+        /// </summary>
+        /// <param name="slag1">возвдимый логорифм</param>
+        /// <param name="up">степень</param>
+        /// <returns></returns>
+        public static double operator ^(Log slag1, double up)
+        {
+            double buf = 0;
+            buf = Math.Pow(slag1.Value,up);
             return buf;
         }
 
