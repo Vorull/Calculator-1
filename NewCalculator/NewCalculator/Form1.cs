@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculator
+namespace NewCalculator
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -22,9 +22,12 @@ namespace Calculator
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void колвоЗнаковToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (richTextBoxVir.Text.Length <= 16)
+                richTextBoxVir.Text += "1";
+            else
+                richTextBoxOsn.Text += "1";
         }
     }
 }
