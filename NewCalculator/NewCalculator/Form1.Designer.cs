@@ -174,13 +174,14 @@
             // 
             // buttonLog
             // 
-            this.buttonLog.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLog.Font = new System.Drawing.Font("Times New Roman", 19.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLog.Location = new System.Drawing.Point(103, 453);
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.Size = new System.Drawing.Size(75, 50);
             this.buttonLog.TabIndex = 17;
             this.buttonLog.Text = "log";
             this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
             // buttonLn
             // 
@@ -191,6 +192,7 @@
             this.buttonLn.TabIndex = 18;
             this.buttonLn.Text = "ln";
             this.buttonLn.UseVisualStyleBackColor = true;
+            this.buttonLn.Click += new System.EventHandler(this.buttonLn_Click);
             // 
             // buttonLg
             // 
@@ -201,6 +203,7 @@
             this.buttonLg.TabIndex = 19;
             this.buttonLg.Text = "lg";
             this.buttonLg.UseVisualStyleBackColor = true;
+            this.buttonLg.Click += new System.EventHandler(this.buttonLg_Click);
             // 
             // buttonResult
             // 
@@ -221,6 +224,7 @@
             this.buttonPlus.TabIndex = 22;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
             // 
             // buttonMinus
             // 
@@ -261,6 +265,7 @@
             this.buttonBack.TabIndex = 26;
             this.buttonBack.Text = "←";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonC
             // 
@@ -271,6 +276,7 @@
             this.buttonC.TabIndex = 27;
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = true;
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
             // 
             // buttonCE
             // 
@@ -281,6 +287,7 @@
             this.buttonCE.TabIndex = 28;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = true;
+            this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
             // 
             // buttonComa
             // 
@@ -327,18 +334,20 @@
             this.richTextBoxOsn.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBoxOsn.Location = new System.Drawing.Point(54, 108);
             this.richTextBoxOsn.Name = "richTextBoxOsn";
-            this.richTextBoxOsn.Size = new System.Drawing.Size(264, 26);
+            this.richTextBoxOsn.Size = new System.Drawing.Size(76, 26);
             this.richTextBoxOsn.TabIndex = 33;
             this.richTextBoxOsn.Text = "";
+            this.richTextBoxOsn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxOsn_KeyPress);
             // 
             // richTextBoxVir
             // 
             this.richTextBoxVir.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBoxVir.Location = new System.Drawing.Point(88, 58);
             this.richTextBoxVir.Name = "richTextBoxVir";
-            this.richTextBoxVir.Size = new System.Drawing.Size(280, 44);
+            this.richTextBoxVir.Size = new System.Drawing.Size(113, 44);
             this.richTextBoxVir.TabIndex = 34;
             this.richTextBoxVir.Text = "";
+            this.richTextBoxVir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxVir_KeyPress);
             // 
             // menuStrip1
             // 
@@ -360,17 +369,16 @@
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(322, 38);
+            this.labelResult.Location = new System.Drawing.Point(132, 38);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(46, 17);
+            this.labelResult.Size = new System.Drawing.Size(0, 17);
             this.labelResult.TabIndex = 36;
-            this.labelResult.Text = "label2";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(269, 137);
+            this.label2.Location = new System.Drawing.Point(262, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 32);
             this.label2.TabIndex = 37;
