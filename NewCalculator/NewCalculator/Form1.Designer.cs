@@ -59,7 +59,6 @@
             this.колвоЗнаковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelResult = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxStepen = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -295,13 +294,14 @@
             // 
             // buttonComa
             // 
-            this.buttonComa.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonComa.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonComa.Location = new System.Drawing.Point(12, 173);
             this.buttonComa.Name = "buttonComa";
             this.buttonComa.Size = new System.Drawing.Size(75, 50);
             this.buttonComa.TabIndex = 29;
-            this.buttonComa.Text = ",";
+            this.buttonComa.Text = "Osn";
             this.buttonComa.UseVisualStyleBackColor = true;
+            this.buttonComa.Click += new System.EventHandler(this.buttonComa_Click);
             // 
             // buttonCor
             // 
@@ -390,20 +390,11 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "label2";
             // 
-            // textBoxStepen
-            // 
-            this.textBoxStepen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxStepen.Location = new System.Drawing.Point(88, 102);
-            this.textBoxStepen.Name = "textBoxStepen";
-            this.textBoxStepen.Size = new System.Drawing.Size(100, 34);
-            this.textBoxStepen.TabIndex = 38;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 515);
-            this.Controls.Add(this.textBoxStepen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.menuStrip1);
@@ -478,7 +469,6 @@
         private System.Windows.Forms.ToolStripMenuItem колвоЗнаковToolStripMenuItem;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxStepen;
     }
 }
 

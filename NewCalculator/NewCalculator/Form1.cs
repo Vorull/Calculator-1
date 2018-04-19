@@ -17,11 +17,10 @@ namespace NewCalculator
         {
             InitializeComponent();
         }
-
+        public static bool Osn = false;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            textBoxStepen.Visible = false;
+            this.WindowState = FormWindowState.Minimized;            
         }
         /// <summary>
         /// ввод цифры 1
@@ -34,6 +33,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "1";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "1";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "1";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 2
@@ -46,6 +50,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "2";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "2";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "2";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 3
@@ -58,6 +67,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "3";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "3";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "3";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 4
@@ -70,6 +84,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "4";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "4";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "4";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 5
@@ -82,6 +101,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "5";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "5";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "5";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 6
@@ -94,6 +118,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "6";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "6";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "6";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 7
@@ -106,6 +135,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "7";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "7";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "7";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 8
@@ -118,6 +152,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "8";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
                 richTextBoxOsn.Text += "8";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "8";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 9
@@ -130,6 +169,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "9";
             if (richTextBoxVir.Text.Length==6 && richTextBoxOsn.Text.Length<=5)
                 richTextBoxOsn.Text += "9";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "9";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// ввод 0
@@ -142,6 +186,11 @@ namespace NewCalculator
                 richTextBoxVir.Text += "0";
             if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text.Length != 0)
                 richTextBoxOsn.Text += "0";
+            if (Osn == true)
+            {
+                richTextBoxOsn.Text += "0";
+                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+            }
         }
         /// <summary>
         /// запрет на ввод в текстбокс1 !!! НЕ ХОЧЕТ БЛОКИРОВАТЬ РУЧНОЙ ВВОД >5 СИМВОЛОВ
@@ -226,7 +275,13 @@ namespace NewCalculator
         /// <param name="e"></param>
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);            
+            if (richTextBoxOsn.Text.Length != 0 || richTextBoxVir.Text.Length != 0)
+            {
+                if (Osn==false)
+                    richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+                if (Osn == true)
+                    richTextBoxOsn.Text = richTextBoxOsn.Text.Remove(richTextBoxOsn.Text.Length - 1);
+            }
         }
         /// <summary>
         /// очистка одного поля
@@ -322,10 +377,6 @@ namespace NewCalculator
             //цифру из степени - в степень
             if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
             {
-                label1.Visible = false;
-                richTextBoxOsn.Visible = false;
-                richTextBoxVir.Visible = false;
-                textBoxStepen.Visible = true;
                 labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^";
                 richTextBoxOsn.Text = "";
                 richTextBoxOsn.Enabled = true;
@@ -348,6 +399,14 @@ namespace NewCalculator
                 richTextBoxOsn.Enabled = true;
                 richTextBoxVir.Text = "";
             }
+        }
+
+        private void buttonComa_Click(object sender, EventArgs e)
+        {
+            if (Osn == true)
+                Osn = false;
+            else
+                Osn = true;
         }
     }
 }
