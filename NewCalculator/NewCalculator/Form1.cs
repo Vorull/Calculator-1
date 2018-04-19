@@ -269,19 +269,18 @@ namespace NewCalculator
             richTextBoxOsn.Text = "10";
         }
         /// <summary>
-        /// бесполезная стрелочка
+        /// стирка символов - вроде работает
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            if (richTextBoxOsn.Text.Length != 0 || richTextBoxVir.Text.Length != 0)
-            {
-                if (Osn==false)
+            if (Osn==false)
+                if (richTextBoxVir.Text.Length != 0)
                     richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
-                if (Osn == true)
-                    richTextBoxOsn.Text = richTextBoxOsn.Text.Remove(richTextBoxOsn.Text.Length - 1);
-            }
+            if (Osn==true)
+                if (richTextBoxOsn.Text.Length != 0)
+                    richTextBoxOsn.Text = richTextBoxOsn.Text.Remove(richTextBoxOsn.Text.Length - 1);            
         }
         /// <summary>
         /// очистка одного поля
@@ -310,59 +309,71 @@ namespace NewCalculator
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text!="0")
             {
-                labelResult.Text += "+log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "+";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    labelResult.Text += "+log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "+";
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
-                labelResult.Text += "-log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "-";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    labelResult.Text += "-log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "-";
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
-                if (labelResult.Text.Length==0)
-                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
-                else
-                    labelResult.Text += "/log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    if (labelResult.Text.Length == 0)
+                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                    else
+                        labelResult.Text += "/log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
 
         private void buttonUmn_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
-                if (labelResult.Text.Length==0)
-                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
-                else
-                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    if (labelResult.Text.Length == 0)
+                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                    else
+                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
         /// <summary>
@@ -372,15 +383,25 @@ namespace NewCalculator
         /// <param name="e"></param>
         private void buttonStep_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            //цифру из степени - в степень
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
-                labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                //цифру из степени - в степень - это Step
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    Stepen nMain = new Stepen();
+                    if (nMain.ShowDialog(this) == DialogResult.Cancel)
+                    {
+                        MessageBox.Show("Степень не была выбрана", "Отмена", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    int Step = Stepen.str;
+                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^"+Step;
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
         /// <summary>
@@ -390,23 +411,31 @@ namespace NewCalculator
         /// <param name="e"></param>
         private void buttonCor_Click(object sender, EventArgs e)
         {
-            //тут надо передать данные из richTextBoxVir в переменную-выражение
-            //richTextBoxOsn в переменную-основание
-            if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+            if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
-                labelResult.Text += "sqrt(log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + "))";
-                richTextBoxOsn.Text = "";
-                richTextBoxOsn.Enabled = true;
-                richTextBoxVir.Text = "";
+                //тут надо передать данные из richTextBoxVir в переменную-выражение
+                //richTextBoxOsn в переменную-основание
+                if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
+                {
+                    labelResult.Text += "sqrt(log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + "))";
+                    richTextBoxOsn.Text = "";
+                    richTextBoxOsn.Enabled = true;
+                    richTextBoxVir.Text = "";
+                }
             }
         }
-
+        /// <summary>
+        /// изменение режима ввода
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonComa_Click(object sender, EventArgs e)
         {
             if (Osn == true)
                 Osn = false;
             else
                 Osn = true;
-        }
+        }    
+        
     }
 }
