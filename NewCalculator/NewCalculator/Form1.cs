@@ -18,6 +18,7 @@ namespace NewCalculator
             InitializeComponent();
         }
         public static bool Osn = false;
+        public static int comaNum;
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;            
@@ -31,9 +32,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "1";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "1";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text!="e")
             {
                 richTextBoxOsn.Text += "1";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -48,9 +49,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "2";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "2";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "2";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -65,9 +66,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "3";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "3";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "3";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -82,9 +83,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "4";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "4";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "4";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -99,9 +100,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "5";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "5";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "5";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -116,9 +117,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "6";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "6";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "6";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -133,9 +134,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "7";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "7";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "7";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -150,9 +151,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "8";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "8";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e" )
             {
                 richTextBoxOsn.Text += "8";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -167,9 +168,9 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5)
                 richTextBoxVir.Text += "9";
-            if (richTextBoxVir.Text.Length==6 && richTextBoxOsn.Text.Length<=5)
+            if (richTextBoxVir.Text.Length==6 && richTextBoxOsn.Text.Length<=5 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "9";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
                 richTextBoxOsn.Text += "9";
                 richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
@@ -184,12 +185,12 @@ namespace NewCalculator
         {
             if (richTextBoxVir.Text.Length <= 5 && richTextBoxVir.Text.Length!=0 && richTextBoxOsn.Text.Length == 0)
                 richTextBoxVir.Text += "0";
-            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text.Length != 0)
+            if (richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text.Length != 0 && richTextBoxOsn.Text != "e")
                 richTextBoxOsn.Text += "0";
-            if (Osn == true)
+            if (Osn == true && richTextBoxOsn.Text != "e")
             {
-                richTextBoxOsn.Text += "0";
-                richTextBoxVir.Text = richTextBoxVir.Text.Remove(richTextBoxVir.Text.Length - 1);
+                if(richTextBoxVir.Text.Length == 6 && richTextBoxOsn.Text.Length <= 5 && richTextBoxOsn.Text.Length != 0)
+                    richTextBoxOsn.Text += "0";                
             }
         }
         /// <summary>
@@ -223,9 +224,9 @@ namespace NewCalculator
         private void richTextBoxOsn_KeyPress(object sender, KeyPressEventArgs e)
         {
             string c = e.KeyChar.ToString();
-            if (!Regex.Match(c, @"[0-9]").Success && richTextBoxOsn.Text.Length != 0 && richTextBoxOsn.Text.Length <= 5)
+            if (!Regex.Match(c, @"[0-9]").Success && richTextBoxOsn.Text.Length != 0)
                 e.Handled = true;
-            if (!Regex.Match(c, @"[1-9]").Success && richTextBoxOsn.Text.Length == 0 && richTextBoxOsn.Text.Length <= 5)
+            if (!Regex.Match(c, @"[1-9]").Success && richTextBoxOsn.Text.Length == 0)
                 e.Handled = true;
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -236,7 +237,7 @@ namespace NewCalculator
                     richTextBoxOsn.Lines = nLines.ToArray();
                 }
                 richTextBoxVir.Focus();
-            }
+            }            
         }
         /// <summary>
         /// клик на кнопку log
@@ -256,7 +257,7 @@ namespace NewCalculator
         private void buttonLn_Click(object sender, EventArgs e)
         {
             richTextBoxOsn.Enabled = false;
-            richTextBoxOsn.Text = "e";
+            richTextBoxOsn.Text = "e";            
         }
         /// <summary>
         /// клик на кнопку lg
@@ -313,25 +314,37 @@ namespace NewCalculator
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
                 //richTextBoxOsn в переменную-основание
+                if (richTextBoxVir.Text.Length >6  || richTextBoxOsn.Text.Length >6)
+                {
+                    MessageBox.Show("Введено слишком длинное число.");
+                    richTextBoxVir.Text = "";
+                    richTextBoxOsn.Text = "";
+                }
                 if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
                 {
-                    labelResult.Text += "+log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "+";
+                    labelResult.Text = "+log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "+";
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
                 }
-            }
+            }            
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
+            if (richTextBoxVir.Text.Length > 6 || richTextBoxOsn.Text.Length > 6)
+            {
+                MessageBox.Show("Введено слишком длинное число.");
+                richTextBoxVir.Text = "";
+                richTextBoxOsn.Text = "";
+            }
             if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
                 //richTextBoxOsn в переменную-основание
                 if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
                 {
-                    labelResult.Text += "-log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "-";
+                    labelResult.Text = "-log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "-";
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
@@ -341,6 +354,12 @@ namespace NewCalculator
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
+            if (richTextBoxVir.Text.Length > 6 || richTextBoxOsn.Text.Length > 6)
+            {
+                MessageBox.Show("Введено слишком длинное число.");
+                richTextBoxVir.Text = "";
+                richTextBoxOsn.Text = "";
+            }
             if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
@@ -348,9 +367,9 @@ namespace NewCalculator
                 if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
                 {
                     if (labelResult.Text.Length == 0)
-                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                        labelResult.Text = "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
                     else
-                        labelResult.Text += "/log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
+                        labelResult.Text = "/log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "/";
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
@@ -360,6 +379,12 @@ namespace NewCalculator
 
         private void buttonUmn_Click(object sender, EventArgs e)
         {
+            if (richTextBoxVir.Text.Length > 6 || richTextBoxOsn.Text.Length > 6)
+            {
+                MessageBox.Show("Введено слишком длинное число.");
+                richTextBoxVir.Text = "";
+                richTextBoxOsn.Text = "";
+            }
             if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
@@ -367,9 +392,9 @@ namespace NewCalculator
                 if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
                 {
                     if (labelResult.Text.Length == 0)
-                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                        labelResult.Text = "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
                     else
-                        labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
+                        labelResult.Text = "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "*";
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
@@ -383,6 +408,12 @@ namespace NewCalculator
         /// <param name="e"></param>
         private void buttonStep_Click(object sender, EventArgs e)
         {
+            if (richTextBoxVir.Text.Length > 6 || richTextBoxOsn.Text.Length > 6)
+            {
+                MessageBox.Show("Введено слишком длинное число.");
+                richTextBoxVir.Text = "";
+                richTextBoxOsn.Text = "";
+            }
             if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
@@ -397,7 +428,7 @@ namespace NewCalculator
                         return;
                     }
                     int Step = Stepen.str;
-                    labelResult.Text += "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^"+Step;
+                    labelResult.Text = "log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + ")" + "^"+Step;
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
@@ -411,13 +442,19 @@ namespace NewCalculator
         /// <param name="e"></param>
         private void buttonCor_Click(object sender, EventArgs e)
         {
+            if (richTextBoxVir.Text.Length > 6 || richTextBoxOsn.Text.Length > 6)
+            {
+                MessageBox.Show("Введено слишком длинное число.");
+                richTextBoxVir.Text = "";
+                richTextBoxOsn.Text = "";
+            }
             if (richTextBoxOsn.Text != "1" && richTextBoxOsn.Text != "0" && richTextBoxVir.Text != "0")
             {
                 //тут надо передать данные из richTextBoxVir в переменную-выражение
                 //richTextBoxOsn в переменную-основание
                 if (richTextBoxOsn.Text.Length != 0 && richTextBoxVir.Text.Length != 0)
                 {
-                    labelResult.Text += "sqrt(log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + "))";
+                    labelResult.Text = "sqrt(log(" + richTextBoxOsn.Text + "," + richTextBoxVir.Text + "))";
                     richTextBoxOsn.Text = "";
                     richTextBoxOsn.Enabled = true;
                     richTextBoxVir.Text = "";
@@ -435,7 +472,25 @@ namespace NewCalculator
                 Osn = false;
             else
                 Osn = true;
-        }    
-        
+        }
+
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+            //сюда перенести результат            
+            double result=0; //вот сюда, да
+            comaNum = Kol_vo.coma;//количество знаков после запятой
+            label2.Text = Convert.ToString(Math.Round(result, comaNum));            
+        }
+
+        private void ввестиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kol_vo nMaint = new Kol_vo();
+            if (nMaint.ShowDialog(this) == DialogResult.Cancel)
+            {
+                MessageBox.Show("Количество знаков в ответе не было выбрано", "Отмена", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            comaNum = Kol_vo.coma;
+        }
     }
 }

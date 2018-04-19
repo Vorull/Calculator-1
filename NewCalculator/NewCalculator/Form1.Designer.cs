@@ -59,6 +59,7 @@
             this.колвоЗнаковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelResult = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ввестиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +215,7 @@
             this.buttonResult.TabIndex = 21;
             this.buttonResult.Text = "=";
             this.buttonResult.UseVisualStyleBackColor = true;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             // 
             // buttonPlus
             // 
@@ -368,6 +370,8 @@
             // 
             // колвоЗнаковToolStripMenuItem
             // 
+            this.колвоЗнаковToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ввестиToolStripMenuItem});
             this.колвоЗнаковToolStripMenuItem.Name = "колвоЗнаковToolStripMenuItem";
             this.колвоЗнаковToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.колвоЗнаковToolStripMenuItem.Text = "Кол-во знаков";
@@ -389,6 +393,13 @@
             this.label2.Size = new System.Drawing.Size(99, 32);
             this.label2.TabIndex = 37;
             this.label2.Text = "label2";
+            // 
+            // ввестиToolStripMenuItem
+            // 
+            this.ввестиToolStripMenuItem.Name = "ввестиToolStripMenuItem";
+            this.ввестиToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.ввестиToolStripMenuItem.Text = "Ввести...";
+            this.ввестиToolStripMenuItem.Click += new System.EventHandler(this.ввестиToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -469,6 +480,7 @@
         private System.Windows.Forms.ToolStripMenuItem колвоЗнаковToolStripMenuItem;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem ввестиToolStripMenuItem;
     }
 }
 
