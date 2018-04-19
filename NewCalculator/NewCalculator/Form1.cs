@@ -477,7 +477,7 @@ namespace NewCalculator
         private void buttonResult_Click(object sender, EventArgs e)
         {
             //сюда перенести результат            
-            double result=0; //вот сюда, да
+            double result=34.134; //вот сюда, да
             comaNum = Kol_vo.coma;//количество знаков после запятой
             label2.Text = Convert.ToString(Math.Round(result, comaNum));            
         }
